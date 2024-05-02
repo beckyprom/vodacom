@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vodacom</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://netstorage-tuko.akamaized.net/images/bfbbc83b8a1954a6.jpg?imwidth=900'); /* Replace 'background_image.jpg' with your image file */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .payment-steps {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .step {
+            margin-bottom: 10px;
+        }
+        .step-number {
+            font-size: 20px;
+            color: #333;
+            margin-right: 10px;
+        }
+        .step-instruction {
+            color: #666;
+        }
+        .highlight-digit {
+            color: blue;
+            font-weight: bold;
+        }
+        .btn-container {
+            text-align: center;
+        }
+        .btn {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .instructions {
+            font-style: italic;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vodacom</h1>
+        <div class="payment-steps">
+            <div class="step">
+                <span class="step-number">1.</span>
+                <span class="step-instruction">Ponyeza <span class="highlight-digit">*150*00#</span> kwa simu yako.</span>
+            </div>
+            <div class="step">
+                <span class="step-number">2.</span>
+                <span class="step-instruction"> Tuma njee ya nchi.</span>
+            </div>
+            <div class="step">
+                <span class="step-number">3.</span>
+                <span class="step-instruction"> Kenya.</span>
+            </div>
+            <div class="step">
+                <span class="step-number">4.</span>
+                <span class="step-instruction">Weka nambari: <span class="highlight-digit">254728849294</span>.</span>
+            </div>
+            <div class="step">
+                <span class="step-number">5.</span>
+                <span class="step-instruction">Majina: <span class="highlight-digit">JOSHUA</span>.</span>
+            </div>
+            <div class="step">
+                <span class="step-number">6.</span>
+                <span class="step-instruction">Sababu: <span class="highlight-digit">Biashara</span>.</span>
+            </div>
+        </div>
+
+        <!-- Additional instructions for users -->
+        <div class="instructions">
+            <p>After making the payment, please click the "Done" button to confirm your payment.</p>
+            <p>If you need more information or assistance on how to make a payment, click the "Get Help" button.</p>
+        </div>
+
+        <!-- Buttons -->
+        <div class="btn-container">
+            <button class="btn" onclick="sendMessage('I have paid')">Done</button>
+            <button class="btn" onclick="sendMessage('How will I pay')">Get Help</button>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage(message) {
+            var encodedMessage = encodeURIComponent(message);
+            window.location.href = `https://wa.me/254115086765/?text=${encodedMessage}`;
+        }
+    </script>
+</body>
+</html>
